@@ -16,4 +16,23 @@
 //  ⌺ Black Diamond Challenge:
     //  Add three more parameters to your function; one that defines the mid-point (5 in the above instructions), and one that defines what to replace each digit with (0 and 1 in the above examples)
 
+func fakeBinary(n: String) -> String? {
+    var output = ""
+    for c in n {
+        print(c)
+        guard let int: Int = Int(String(c)) else {return nil}
+        if int > 5 {
+            output.append("1")
+        } else {
+            output.append("0")
+        }
+    }
+    return output
+}
+if let result = fakeBinary(n: "1034687") {
+    print(result)
+}
+
+
+
 import Foundation

@@ -43,4 +43,6 @@ func blackDiamond(array: [Int]) -> ([Int] , [Int]) {
     return (posArray, negArray)
 }
 
+print("Hello World")
+
 import Foundation
