@@ -7,11 +7,25 @@
 
 //  Restrictions:
     //  The size will always be positive and will only use whole numbers.
+func stringy(int: Int, _ startOn1: Bool) -> String {
+    var output = ""
+    
+    for i in 0..<int {
+        if startOn1 == true {
+            i.isMultiple(of: 2) ? output.append("1") : output.append("0")
+        } else {
+            i.isMultiple(of: 2) ? output.append("0") : output.append("1")
+        }
+    }
+    
+    return output
+}
 
 //  Examples:
     //  Input: 6
     //  Output: "101010".
-
+let result1 = stringy(int: 5, false)
+print(result1)
     //  Input: 4
     //  Output: "1010".
 
