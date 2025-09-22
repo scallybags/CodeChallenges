@@ -16,7 +16,21 @@
 
     //  Input: array: ["hi", "hello", "howdy"], x: "sup"
     //  Output: false
+func check(array: [Int], value: Int) -> Bool {
+    array.contains(value)
+}
 
+func check(array: [String], value: String) -> Bool {
+    array.contains(value)
+}
+
+
+func generic<T: Equatable>(array: [T], value: T) -> Bool {
+    array.contains(value)
+}
+
+print(generic(array: ["1","2"], value: "1"))
+print(generic(array: [1.5,2.7], value: 1.0))
 //  ⌺ Black Diamond Challenge:
     //  Create another function. Accomplish the same goal using generics instead of function overloading.
 
