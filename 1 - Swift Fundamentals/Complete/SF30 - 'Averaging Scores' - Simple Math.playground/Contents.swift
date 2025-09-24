@@ -7,9 +7,23 @@
 
 //  Notes:
     //  The array will never be empty.
+//func aveLong(a: [Double]) -> Int {
+//    var total: Double = 0
+//    for i in a {
+//        total += i
+//    }
+//    let ave = Int(total) / a.count
+//    return ave
+//}
+
+func aveShort(a: [Double]) -> Int {
+    let ave = ((Int(a.reduce(0,+))) / a.count)
+    return ave
+}
 
 //  Examples:
-    //  Input: array: [90, 80, 70, 60, 50]
+var a = [90.0, 80.0, 70, 60, 50]
+print(aveShort(a: a))
     //  Output: 70
 
     //  Input: array: [1, 2, 3, 4, 5]
