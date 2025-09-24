@@ -9,6 +9,11 @@
     //  [sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep] (YOU ARE HERE AT THE FRONT OF THE QUEUE)
     //    7      6      5      4      3            2      1
     //  If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep". Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
+func wolfGoByeBye(array: [String]) -> String {
+    guard let wolfIndex = array.firstIndex(of: "Wolf") else { return "no wolf, no worries" }
+    print(wolfIndex)
+    return String(wolfIndex)
+}
 
 //  Notes:
     //  There will always be exactly one wolf in the array.
@@ -22,5 +27,12 @@
 
 //  ⌺ Black Diamond Challenge:
     //  Create another function. This time, return the first and last n elements of the array. If the first and last n elements overlap (i.e., 3 first and 3 last in a 5 element array), return the whole array.
-
+//func anotherOne(array: [String]) -> [String] {
+//    guard let first = array.first, let last = array.last else { return }
+//    if first == last {
+//        return array
+//    } else {
+//        return [first, last]
+//    }
+//}
 import Foundation
