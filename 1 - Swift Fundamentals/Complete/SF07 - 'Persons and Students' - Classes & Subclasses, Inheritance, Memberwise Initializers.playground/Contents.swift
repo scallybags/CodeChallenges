@@ -38,4 +38,4 @@ func printAge(person: Person) {
     print(person.age)
 }
 
-printAge(person: Student)
+
